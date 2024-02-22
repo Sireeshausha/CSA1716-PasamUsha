@@ -1,0 +1,28 @@
+def dfs(graph, start, visited):
+    if start not in visited:
+        print(start, end=' ')
+        visited.add(start)
+
+        for neighbor in graph[start]:
+            dfs(graph, neighbor, visited)
+
+# Get graph input from the user
+graph = {}
+num_edges = int(input("Enter the number of edges: "))
+
+for _ in range(num_edges):
+    src, dest = input("Enter edge (source destination): ").split()
+    if src not in graph:
+        graph[src] = []
+    if dest not in graph:
+        graph[dest] = []
+    graph[src].append(dest)
+    graph[dest].append(src)
+
+# Get starting vertex from the user
+start_vertex = input("Enter the starting vertex: ")
+
+print("DFS Traversal:")
+visited_set = set()
+dfs(graph, start_vertex, visited_set)
+
