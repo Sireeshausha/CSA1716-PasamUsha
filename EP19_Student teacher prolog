@@ -1,0 +1,5 @@
+takes(usha, his201).
+takes(usha, cs245).
+takes(sravani, art302).
+takes(sravani, cs254).
+classmates(X, Y) :- takes(X, Z), takes(Y, Z).takes(prasoona, his201).
