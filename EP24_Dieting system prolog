@@ -1,0 +1,13 @@
+disease(john,diabets).
+disease(mary,hypertension).
+disease(alex,obesity).
+disease(chris,cholesterol).
+disease(susan,diabets).
+diet(X,"Diabets-frendly diet"):-
+    disease(X,diabets).
+diet(X,"Low-sodium diet"):-
+    disease(X,hypertension).
+diet(X,"Low-calorie diet"):-
+    disease(X,obesity).
+diet(X,"Heart-healthy diet"):-
+    disease(X,cholersterol).
