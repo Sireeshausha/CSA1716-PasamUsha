@@ -1,0 +1,6 @@
+can_fly(sparrow).
+can_fly(pigeon).
+can_fly(penguin).
+can_fly(duck).
+can_fly(eagle).
+flies(X):-can_fly(X).
